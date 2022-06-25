@@ -3,15 +3,23 @@
 @tailwind utilities;
 
 .newBubbleButton {
-    @apply w-24;
-    @apply h-24;
-    @apply rounded-full;
-    @apply bg-blue-500;
-    @apply hover:bg-red-500;
-    @apply text-white;
-    @apply text-5xl;
-    @apply text-center;
-    @apply absolute;
-    @apply bottom-0;
-    @apply right-0;
+    @apply 
+        w-24
+        h-24
+        rounded-full
+        bg-blue-100
+        hover:bg-red-100
+        text-white
+        text-5xl
+        text-center
+        absolute
+        bottom-0
+        right-0;
+}
+
+body {
+    @apply
+        h-screen
+        w-screen
+        bg-gray-900;
 }

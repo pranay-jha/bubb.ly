@@ -4,17 +4,16 @@ import './styles.css';
 const App = () => {
     return (
         <>
-            <NewBubbleButton />
+            <pageBackground />
         </>
     );
 }
 // first commit comment
 
-const NewBubbleButton = () => {
+const pageBackground = () => {
     return (
-        <button className="newBubbleButton">
-            +
-        </button>
-    )
+        <body></body>
+    );
 }
+
 export default App;
