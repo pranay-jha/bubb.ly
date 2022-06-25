@@ -6,21 +6,23 @@ import LogoutHooks from './LogoutHooks';
 const App = () => {
     return (
         <>
-            <PageBackground />
-            <LoginHooks />
-            <LogoutHooks />
+            <body>
+                <LoginHooks />
+                <LogoutHooks />
+            </body>
         </>
     );
 }
 // first commit comment
 
-const PageBackground = () => {
+/*const PageBackground = () => {
     return (
-        <body></body>
+        <body>
+            <LoginHooks />
+            <LogoutHooks />
+        </body>
     );
-}
-
-
+}*/
 
 /*const GoogleLogInButton = () => {
     return (
