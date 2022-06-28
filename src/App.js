@@ -6,21 +6,29 @@ import './styles.css';
 const App = () => {
     return (
         <>
-            <body>
-                <GoogleLogInButton />
-                <GoogleLogOutButton />
+            <body onClick={() => {console.log('clicked')}}>
+                <ButtonBar />
             </body>
         </>
     );
 }
-// first commit comment
+
+const ButtonBar = () => {
+    return (
+        <div className="w-screen h-15 absolute top-0 right-0 left-0 bg-[#102C3C] items-center">
+            <GoogleLogInButton />
+            <GoogleLogOutButton />
+        </div>
+    )
+}
+
 const responseGoogle = (response) => {
   console.log(response);
 }
 
 const GoogleLogInButton = () => {
     return (
-        <GoogleLogin
+        <GoogleLogin 
             clientId="145385750304-g53v1ihlt48gu2h7p0nvam0lfqrj1aog.apps.googleusercontent.com"
             render={renderProps => (
                 <button onClick={renderProps.onClick} disabled={renderProps.disabled} type="button" className="text-white bg-[#62B6CB] hover:bg-[#62B6CB]/90 focus:ring-4 focus:outline-none focus:ring-[#62B6CB]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2">
