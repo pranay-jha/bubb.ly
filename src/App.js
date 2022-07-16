@@ -6,7 +6,7 @@ import './styles.css';
 const App = () => {
     return (
         <>
-            <body onClick={() => {console.log('clicked')}}>
+            <body className={'h-screen w-screen bg-[#1B4965]'} onClick={() => {console.log('clicked')}}>
                 <ButtonBar />
             </body>
         </>
@@ -15,7 +15,7 @@ const App = () => {
 
 const ButtonBar = () => {
     return (
-        <div className="w-screen h-15 absolute top-0 right-0 left-0 bg-[#102C3C] items-center">
+        <div className={'w-screen h-15 absolute top-0 right-0 left-0 bg-[#102C3C] items-center'}>
             <GoogleLogInButton />
             <GoogleLogOutButton />
         </div>
