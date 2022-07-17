@@ -45,10 +45,17 @@ const App = () => {
 
 const ButtonBar = () => {
     return (
-        <header className={'w-screen h-[6.25%] border-b border-slate-300/10 top-0 left-0 flex justify-end items-center'}>
-            <img src=""></img>
-            <GoogleButton/>
-            <button>About</button>
+        <header className={'w-screen h-[6.25%] border-b border-slate-300/10 top-0 left-0 flex flex-row items-center'}>
+            <div className={'px-4 w-1/2 h-[6.25%] flex flex-row justify-start items-center'}>
+                <div className={'border-2 border-white font-[Helvetica] font-bold text-3xl'}>He</div>
+                <div className={'font-[Helvetica] font-bold text-3xl'}>lium</div>
+            </div>
+            <div className={'px-4 w-1/2 h-[6.25%] flex flex-row justify-end items-center'}>
+                <div className={'px-4'}>
+                    <GoogleButton/>    
+                </div>
+                <button className={'px-4 font-semibold'}>About</button>
+            </div>
         </header>
     )
 }
