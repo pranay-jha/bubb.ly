@@ -24,7 +24,7 @@ const App = () => {
 
         google.accounts.id.renderButton(
             document.getElementById("signInDiv"),
-            {theme: "outline", size: "large"}   
+            {theme: "filled_black", size: "medium"}   
         );
 
         google.accounts.id.prompt();
@@ -35,7 +35,7 @@ const App = () => {
 
     return (
         <>
-            <body className={'h-screen w-screen bg-[#1B4965]'} onClick={() => {console.log('clicked')}}>
+            <body className={'h-screen w-screen bg-gradient-to-b from-[#102C3C] to-[#34465F]'} onClick={() => {console.log('clicked')}}>
                 <ButtonBar />
             </body>
         </>
@@ -44,8 +44,10 @@ const App = () => {
 
 const ButtonBar = () => {
     return (
-        <header className={'w-screen h-[6.25%] top-0 left-0 bg-[#102C3C] flex'}>
+        <header className={'w-screen h-[6.25%] top-0 left-0 bg-gray-900 flex justify-end items-center'}>
+            <img src=""></img>
             <GoogleButton/>
+            <button>About</button>
         </header>
     )
 }
