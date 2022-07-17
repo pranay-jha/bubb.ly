@@ -44,9 +44,9 @@ const App = () => {
 
 const ButtonBar = () => {
     return (
-        <div className={'w-screen h-[6.25%] top-0 left-0 bg-[#102C3C] flex'}>
+        <header className={'w-screen h-[6.25%] top-0 left-0 bg-[#102C3C] flex'}>
             <GoogleButton/>
-        </div>
+        </header>
     )
 }
 
