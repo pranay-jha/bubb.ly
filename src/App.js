@@ -45,11 +45,13 @@ const App = () => {
 
 
 const ButtonBar = () => {
+    const buttonStyle = '';
     return (
         <header className={'py-2 w-screen h-[6.25%] border-b border-slate-300/10 absolute top-0 left-0 flex flex-row items-center'}>
             <div className={'w-1/2 h-[6.25%] flex flex-row justify-start items-center'}>
-                <span className={'ml-4 border-2 border-white font-[Helvetica] font-bold text-3xl'}>He</span>
-                <span className={'font-[Helvetica] font-bold text-3xl'}>lium</span>
+                <div className={'ml-4 text-3xl'}>
+                    <Logo />
+                </div>
             </div>
             <div className={'w-1/2 h-[6.25%] flex flex-row justify-end items-center'}>
                 <div className={'mx-4'}>
@@ -68,12 +70,23 @@ const GoogleButton = () => {
     )
 }
 
+const Logo = () => {
+    const logoStyle = 'font-[Helvetica] font-bold'
+    return (
+        <>
+            <span className={'border-2 border-white ' + logoStyle}>He</span>
+            <span className={logoStyle}>lium</span>
+        </>
+    )
+}
+
 const Footer = () => {
+    const footerStyle = 'mx-1 text-center text-xs text-slate-500';
     return (
         <footer className={'w-screen py-2 border-t border-slate-300/10 absolute bottom-0 left-0 flex flex-row justify-center items-center'}>
-            <span className={'mx-1 text-center text-xs text-slate-500'}>Created by Ben Garofalo and Pranay Jha</span>
-            <span className={'mx-1 text-center text-xs text-slate-500'}>&#183;</span>
-            <a className={'mx-1 text-center text-xs text-slate-500 hover:text-slate-400'} href={'https://github.com/pranay-jha/bubb.ly'} target={'_blank'}>GitHub</a>
+            <span className={footerStyle}>Created by Ben Garofalo and Pranay Jha</span>
+            <span className={footerStyle}>&#183;</span>
+            <a className={footerStyle + ' hover:text-slate-400'} href={'https://github.com/pranay-jha/bubb.ly'} target={'_blank'}>GitHub</a>
         </footer>
     )
 }
