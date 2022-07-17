@@ -37,6 +37,7 @@ const App = () => {
         <>
             <body className={'h-screen w-screen bg-gradient-to-b from-[#102C3C] via-[#34465F] to-[#102C3C]'} onClick={() => {console.log('clicked')}}>
                 <ButtonBar />
+                <Footer />
             </body>
         </>
     );
@@ -45,16 +46,16 @@ const App = () => {
 
 const ButtonBar = () => {
     return (
-        <header className={'w-screen h-[6.25%] border-b border-slate-300/10 top-0 left-0 flex flex-row items-center'}>
-            <div className={'px-4 w-1/2 h-[6.25%] flex flex-row justify-start items-center'}>
-                <div className={'border-2 border-white font-[Helvetica] font-bold text-3xl'}>He</div>
-                <div className={'font-[Helvetica] font-bold text-3xl'}>lium</div>
+        <header className={'w-screen h-[6.25%] border-b border-slate-300/10 absolute top-0 left-0 flex flex-row items-center'}>
+            <div className={'w-1/2 h-[6.25%] flex flex-row justify-start items-center'}>
+                <span className={'ml-4 border-2 border-white font-[Helvetica] font-bold text-3xl'}>He</span>
+                <span className={'font-[Helvetica] font-bold text-3xl'}>lium</span>
             </div>
-            <div className={'px-4 w-1/2 h-[6.25%] flex flex-row justify-end items-center'}>
-                <div className={'px-4'}>
-                    <GoogleButton/>    
+            <div className={'w-1/2 h-[6.25%] flex flex-row justify-end items-center'}>
+                <div className={'mx-4'}>
+                    <GoogleButton />    
                 </div>
-                <button className={'px-4 font-semibold'}>About</button>
+                <button className={'mr-4 font-semibold'}>About</button>
             </div>
         </header>
     )
@@ -64,6 +65,14 @@ const GoogleButton = () => {
     return (
         <div id="signInDiv">
         </div>
+    )
+}
+
+const Footer = () => {
+    return (
+        <footer className={'w-screen py-4 border-t border-slate-300/10 absolute bottom-0 left-0 flex flex-row justify-center items-center'}>
+            <span className={'text-center text-xs text-slate-500'}>Created by Ben Garofalo and Pranay Jha</span>
+        </footer>
     )
 }
 
