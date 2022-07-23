@@ -34,21 +34,21 @@ const App = () => {
     return (
         <>
             <div className={'h-screen w-screen bg-gradient-to-b from-[#102C3C] via-[#34465F] to-[#102C3C]'} onClick={() => {console.log('clicked')}}>
-                <ButtonBar user={this.state.user} setUser={this.setUser}/>
+                <ButtonBar user={user} setUser={setUser}/>
                 <Footer />
             </div>
         </>
     );
 }
 
-const ButtonBar = (props) => {
+const ButtonBar = ({user, setUser}) => {
     return (
         <header className={'py-2 w-screen h-[6.25%] border-b border-slate-300/10 absolute top-0 left-0 flex flex-row items-center'}>
             <div className={'w-1/2 h-[6.25%] flex flex-row justify-start items-center'}>
             Logo goes here
             </div>
             <div className={'w-1/2 h-[6.25%] flex flex-row justify-end items-center'}>
-                <ThreeDotsDropdown user={props.user} setUser={props.setUser}/>
+                <ThreeDotsDropdown user={user} setUser={setUser}/>
                 <NewBubbleButton />
             </div>
         </header>
@@ -73,7 +73,7 @@ const Footer = () => {
     )
 }
 
-const ThreeDotsDropdown = (props) => {
+const ThreeDotsDropdown = ({user, setUser}) => {
     const [show, setShow] = useState(false);
     const thisStyle = {
         position: 'absolute',
@@ -83,8 +83,9 @@ const ThreeDotsDropdown = (props) => {
     };
 
     function handleSignOut(event) {
-        props.setUser({});
+        setUser({});
         document.getElementById("signInDiv").hidden = true;
+        console.log('signed out');
     }
 
     return (
@@ -109,7 +110,7 @@ const ThreeDotsDropdown = (props) => {
                     <a href="https://google.com" className="block py-2 px-4 hover:bg-gray-100">About</a>
                 </li>
                 <li>
-                    {props.user &&
+                    {Object.keys(user).length != 0 &&
                     <button onClick={(e) => handleSignOut(e)} className="block py-2 px-4 hover:bg-gray-100 font-semibold">Sign out</button>
                     }
                 </li>
